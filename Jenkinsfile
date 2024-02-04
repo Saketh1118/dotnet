@@ -55,21 +55,25 @@ pipeline {
     }
 
     post {
-        // Define post-build actions
         success {
             // Actions to be taken on successful build
+            echo 'Build succeeded!'
         }
         failure {
             // Actions to be taken on build failure
+            echo 'Build failed!'
         }
         unstable {
             // Actions to be taken when the build is unstable
+            echo 'Build unstable!'
         }
         changed {
             // Actions to be taken when the build status changes
+            echo 'Build status changed!'
         }
         fixed {
             // Actions to be taken when a broken build is fixed
+            echo 'Build fixed!'
         }
     }
 }
